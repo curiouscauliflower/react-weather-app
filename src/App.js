@@ -1,10 +1,11 @@
 import './App.css';
+import Weather from './Weather';
 
 export default function App() {
   return (
     <div className="App">
-      <div className="container-fluid">
-      <h1>Weather app</h1>
+      <div className="container-fluid p-0">
+        <Weather />
       <footer>
         <p>This project was coded by Hanna Tkach and is{" "}
           <a href="https://github.com/curiouscauliflower/react-weather-application.git"
