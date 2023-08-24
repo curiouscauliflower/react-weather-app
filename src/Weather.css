@@ -1,57 +1,85 @@
-.current-temperature {
-    display: flex;
+.Weather .search-field {
+    width: 30%;
+    height: 40px;
+    border: 2px solid #fff;
+    padding-left: 20px;
+    font-size: 20px;
+    background-color: rgb(158, 86, 154, 0.4);
 }
 
-.current-temperature__image {
+.Weather .search-field::placeholder {
+    color: #fff;
+}
+
+.Weather .search-field:focus {
+    outline: none;
+}
+
+.Weather .search-field:focus-visible {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.Weather .search-btn {
+    border: 2px solid #fff;
+    background-color: rgb(158, 86, 154, 0.4);
+    padding: 4px 12px;
+    font-size: 20px;
+}
+
+.Weather .search-btn:hover {
+    background: transparent;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.Weather .current-location h1 {
+    font-size: 44px;
+}
+
+.Weather .current-location li {
+    font-size: 20px;
+    list-style-type: none;
+}
+
+.Weather .current-temperature .icon-container {
+    flex-grow: 1.25;
+}
+
+.Weather .icon-container .icon {
     width: 156px;
     height: 156px;
 }
 
-.current-temperature__icon-container {
-    flex-grow: 1.25;
-    text-align: center;
-}
-
-.current-temperature__content-container {
+.Weather .current-temperature .content-container {
     flex-grow: 1;
-    text-align: center;
 }
 
-.current-temperature__value {
-    font-weight: 300;
+.Weather .content-container .value {
     font-size: 78px;
 }
 
-.current-temperature__units {
+.Weather .content-container .units {
     font-size: 40px;
-    font-weight: 400;
     vertical-align: 50%;
     margin-left: 10px;
 }
 
-.current-temperature__summary {
-    margin-top: -8pxm;
+.Weather .content-container .summary {
     margin-left: -10px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 22px;
-}
-
-.current-stats {
-    display: flex;
-    justify-content: space-around;
-    border-left: 1px solid #061a2b;
-    text-align: center;
-    margin-top: 12px;
-}
-
-.current-stats__value {
     font-weight: 500;
     font-size: 24px;
 }
 
-.current-stats__label {
+.Weather .current-stats {
+    border-left: 1px solid #fff;
+    margin-top: 12px;
+}
+
+.Weather .current-stats .value {
+    font-weight: 500;
+    font-size: 26px;
+}
+
+.Weather .current-stats .label {
     margin: 5px;
-    color: #061a2b;
-    font-size: 20px;
+    font-size: 22px;
 }

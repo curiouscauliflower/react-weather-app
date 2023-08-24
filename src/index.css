@@ -2,8 +2,11 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
+    color: #fff;
 }
 
 body {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(139, 139, 223, 1) 35%, rgba(136, 232, 251, 1) 100%);
+    background-image: url(https://cdn.britannica.com/18/194818-050-E7A7A993/view-Kiev-Ukraine.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }

@@ -1,8 +1,12 @@
 import React from "react";
 import "./Weather.css"
 
-export default function Weather() {
+export default function Wedather() {
   let weatherData = {
+    city: "Kyiv",
+    country: "Ukraine",
+    date: "Thursday, August 24",
+    time: "13:23",
     temperature: 29,
     imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
     description: "Mostly sunny",
@@ -14,68 +18,85 @@ export default function Weather() {
     pressure: 1019
   };
 
-    return (
-      <div>
-      <div className="row">
-        <div className="col">
-          <div className="current-temperature">
-            <div className="current-temperature__icon-container">
+  return (
+    <div className="Weather">
+      <form>
+            <input
+              type="search"
+              name="searchField"
+              placeholder="Enter a city..."
+              autocomplete="off"
+              class="rounded mt-4 search-field"
+            />
+            <input type="submit" value="Search" className="rounded mt-4 ms-2 search-btn" />
+      </form>
+      <div className="mt-4 current-location">
+          <h1>
+            {weatherData.city}, {weatherData.country}
+          </h1>
+          <ul>
+          <li>{weatherData.date}</li>
+          <li>{weatherData.time}</li>
+          </ul>
+        </div>
+      <div className="row mx-auto">
+        <div className="col p-0">
+          <div className="d-flex current-temperature">
+            <div className="icon-container">
               <img
                 src={weatherData.imgUrl}
                 alt={weatherData.description}
-                className="current-temperature__image"
+                className="icon"
               />
             </div>
-
-            <div className="current-temperature__content-container">
-              <div className="current-temperature__value">
+            <div className="content-container">
+              <div className="value">
                 <span>{weatherData.temperature}</span>
-                <span className="current-temperature__units">°C</span>
+                <span className="units">°C</span>
               </div>
-              <div className="current-temperature__summary">
+              <div className="summary">
                 {weatherData.description}
               </div>
             </div>
           </div>
         </div>
-
-        <div className="col">
-          <div className="current-stats">
+        <div className="col p-0">
+          <div className="d-flex justify-content-around current-stats">
             <div>
-              <div className="current-stats__value">
+              <div className="value">
                 <span>{weatherData.highTemp}</span>°
               </div>
-              <div className="current-stats__label">High</div>
-              <div className="current-stats__value">
+              <div className="label">High</div>
+              <div className="value">
                 <span>{weatherData.lowTemp}</span>°
               </div>
-              <div className="current-stats__label">Low</div>
+              <div className="label">Low</div>
             </div>
 
             <div>
-              <div className="current-stats__value">
+              <div className="value">
                 <span>{weatherData.feelsLike}</span>°
               </div>
-              <div className="current-stats__label">Feels like</div>
-              <div className="current-stats__value">
+              <div className="label">Feels like</div>
+              <div className="value">
                 <span>{weatherData.wind}</span> km/h
               </div>
-              <div className="current-stats__label">Wind</div>
+              <div className="label">Wind</div>
             </div>
 
             <div>
-              <div className="current-stats__value">
+              <div className="value">
                 <span>{weatherData.humidity}</span>%
               </div>
-              <div className="current-stats__label">Humidity</div>
-              <div className="current-stats__value">
+              <div className="label">Humidity</div>
+              <div className="value">
                 <span>{weatherData.pressure}</span>mbar
               </div>
-              <div className="current-stats__label">Pressure</div>
+              <div className="label">Pressure</div>
             </div>
           </div>
         </div>
       </div>
-        </div>
+    </div>
   );
 }
