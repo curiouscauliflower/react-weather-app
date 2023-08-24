@@ -6,7 +6,7 @@ export default function App() {
     <div className="App">
       <div className="container-fluid p-0">
         <div className="weather-container w-75 mt-3 mx-auto rounded">
-          <Weather />
+          <Weather defaultCity="Kyiv" />
           <footer>
             <p>This project was coded by Hanna Tkach and is{" "}
               <a href="https://github.com/curiouscauliflower/react-weather-application.git"

@@ -1,24 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "./Weather.css"
 
-export default function Wedather() {
-  let weatherData = {
-    city: "Kyiv",
-    country: "Ukraine",
-    date: "Thursday, August 24",
-    time: "13:23",
-    temperature: 29,
-    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-    description: "Mostly sunny",
-    highTemp: 33,
-    lowTemp: 32,
-    feelsLike: 32,
-    wind: 1,
-    humidity: 33,
-    pressure: 1019
-  };
+export default function Weather(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  
+  function handleResponse(response) {
+    setWeatherData({
+      city: response.data.city,
+      country: response.data.country,
+      icon: response.data.condition.icon_url,
+      temperature: response.data.temperature.current,
+      description: response.data.condition.description,
+      highTemp: 33,
+      lowTemp: 32,
+      feelsLike: response.data.temperature.feels_like,
+      wind: response.data.wind.speed,
+      humidity: response.data.temperature.humidity,
+      pressure: response.data.temperature.pressure,
+      ready: true
+    });
+  }
 
-  return (
+  if (weatherData.ready) {
+    return (
     <div className="Weather">
       <form>
             <input
@@ -35,8 +40,8 @@ export default function Wedather() {
             {weatherData.city}, {weatherData.country}
           </h1>
           <ul>
-          <li>{weatherData.date}</li>
-          <li>{weatherData.time}</li>
+          <li>Thursday, August 24</li>
+          <li>13:23</li>
           </ul>
         </div>
       <div className="row mx-auto">
@@ -44,17 +49,17 @@ export default function Wedather() {
           <div className="d-flex current-temperature">
             <div className="icon-container">
               <img
-                src={weatherData.imgUrl}
+                src={weatherData.icon}
                 alt={weatherData.description}
                 className="icon"
               />
             </div>
             <div className="content-container">
               <div className="value">
-                <span>{weatherData.temperature}</span>
+                <span>{Math.round(weatherData.temperature)}</span>
                 <span className="units">°C</span>
               </div>
-              <div className="summary">
+              <div className="text-capitalize summary">
                 {weatherData.description}
               </div>
             </div>
@@ -75,11 +80,11 @@ export default function Wedather() {
 
             <div>
               <div className="value">
-                <span>{weatherData.feelsLike}</span>°
+                <span>{Math.round(weatherData.feelsLike)}</span>°
               </div>
               <div className="label">Feels like</div>
               <div className="value">
-                <span>{weatherData.wind}</span> km/h
+                <span>{Math.round(weatherData.wind)}</span> km/h
               </div>
               <div className="label">Wind</div>
             </div>
@@ -90,7 +95,7 @@ export default function Wedather() {
               </div>
               <div className="label">Humidity</div>
               <div className="value">
-                <span>{weatherData.pressure}</span>mbar
+                <span>{Math.round(weatherData.pressure)}</span>mbar
               </div>
               <div className="label">Pressure</div>
             </div>
@@ -99,4 +104,12 @@ export default function Wedather() {
       </div>
     </div>
   );
+  } else {
+      const apiKey = "671758b590o71f73f4ceca7at502e7ba";
+      let units = "metric";
+      let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=${units}`;
+      axios.get(apiUrl).then(handleResponse);
+    
+      return <p>Loading...</p>;
+  } 
 }
