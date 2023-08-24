@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Watch } from 'react-loader-spinner';
 import axios from "axios";
 import "./Weather.css"
 
@@ -24,7 +25,7 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-    <div className="Weather">
+      <div className="Weather">
       <form>
             <input
               type="search"
@@ -110,6 +111,20 @@ export default function Weather(props) {
       let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=${units}`;
       axios.get(apiUrl).then(handleResponse);
     
-      return <p>Loading...</p>;
+    return (
+      <div>
+        <p>Loading...</p>
+        <Watch
+          height="80"
+          width="80"
+          radius="48"
+          color="#9e569a"
+          ariaLabel="watch-loading"
+          wrapperStyle={{}}
+          wrapperClassName=""
+          visible={true}
+        />
+      </div>
+    );
   } 
 }
