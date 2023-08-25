@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
-import { Watch } from 'react-loader-spinner';
+import { MutatingDots  } from 'react-loader-spinner';
 import axios from "axios";
 import "./Weather.css"
 
@@ -66,19 +66,21 @@ export default function Weather(props) {
     return (
       <div>
         <p className="loading">Loading...</p>
-          <Watch
-            height="100"
-            width="100"
-            radius="48"
-            color="#9e569a"
-            ariaLabel="watch-loading"
-            wrapperStyle={{
+        <MutatingDots 
+          height="100"
+          width="100"
+          color="#fff"
+          secondaryColor= '#9e569a'
+          radius='12.5'
+          ariaLabel="mutating-dots-loading"
+          wrapperStyle={{
             display: "block",
             margin: "auto",
             padding: "50px 0"
-            }}
-            visible={true}
-          />
+          }}
+          wrapperClass=""
+          visible={true}
+        />
       </div>
     );
   } 
