@@ -83,3 +83,8 @@
     margin: 5px;
     font-size: 22px;
 }
+
+.loading {
+    font-size: 26px;
+    padding-top: 30px;
+}

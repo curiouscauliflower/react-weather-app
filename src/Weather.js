@@ -113,17 +113,20 @@ export default function Weather(props) {
     
     return (
       <div>
-        <p>Loading...</p>
-        <Watch
-          height="80"
-          width="80"
-          radius="48"
-          color="#9e569a"
-          ariaLabel="watch-loading"
-          wrapperStyle={{}}
-          wrapperClassName=""
-          visible={true}
-        />
+        <p className="loading">Loading...</p>
+          <Watch
+            height="100"
+            width="100"
+            radius="48"
+            color="#9e569a"
+            ariaLabel="watch-loading"
+            wrapperStyle={{
+            display: "block",
+            margin: "auto",
+            padding: "50px 0"
+            }}
+            visible={true}
+          />
       </div>
     );
   } 
