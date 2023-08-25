@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
+import FormattedTime from "./FormattedTime";
 import { Watch } from 'react-loader-spinner';
 import axios from "axios";
 import "./Weather.css"
@@ -7,9 +9,13 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   
   function handleResponse(response) {
+    console.log(response.data);
+
     setWeatherData({
       city: response.data.city,
       country: response.data.country,
+      date: new Date(),
+      time: new Date(response.data.time * 1000),
       icon: response.data.condition.icon_url,
       temperature: response.data.temperature.current,
       description: response.data.condition.description,
@@ -41,8 +47,8 @@ export default function Weather(props) {
             {weatherData.city}, {weatherData.country}
           </h1>
           <ul>
-          <li>Thursday, August 24</li>
-          <li>13:23</li>
+            <li><FormattedDate date={weatherData.date} /></li>
+          <li><FormattedTime time={weatherData.time} /></li>
           </ul>
         </div>
       <div className="row mx-auto">
