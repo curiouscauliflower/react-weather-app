@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import { MutatingDots  } from 'react-loader-spinner';
 import axios from "axios";
-import "./Weather.css"
+import "./Weather.css";
+import clear_sky_day from "./images/clear_sky_day.jpg";
+import clear_sky_night from "./images/clear_sky_night.jpg";
+import rain_day from "./images/rain_day.jpg";
+import rain_night from "./images/rain_night.jpg";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -44,9 +48,31 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  const imgMapping = {
+    "clear-sky-day": clear_sky_day,
+    "clear-sky-night": clear_sky_night,
+    "few-clouds-day": clear_sky_day,
+    "few-clouds-night": clear_sky_day,
+    "scattered-clouds-day": clear_sky_day,
+    "scattered-clouds-night": clear_sky_day,
+    "broken-clouds-day": clear_sky_day,
+    "broken-clouds-night": clear_sky_day,
+    "shower-rain-day": clear_sky_day,
+    "shower-rain-night": clear_sky_day,
+    "rain-day": rain_day,
+    "rain-night": rain_night,
+    "thunderstorm-day": clear_sky_day,
+    "thunderstorm-night": clear_sky_day,
+    "snow-day": clear_sky_day,
+    "snow-night": clear_sky_day,
+    "mist-day": clear_sky_day,
+    "mist-night": clear_sky_day,
+  };
+ 
   if (weatherData.ready) {
     return (
-      <div className="Weather">
+      <div className="Weather" style={{ backgroundImage: `url(${imgMapping[weatherData.icon]})` }}>
+        <div className="weather-container w-75 pt-3 mx-auto">
         <form onSubmit={handleSubmit}>
             <input
               type="search"
@@ -58,7 +84,8 @@ export default function Weather(props) {
             />
             <input type="submit" value="Search" className="rounded mt-4 ms-2 search-btn" />
         </form>
-        <WeatherInfo data={weatherData} />
+          <WeatherInfo data={weatherData} />
+        </div>
       </div>
     );
   } else {

@@ -5,7 +5,6 @@ export default function App() {
   return (
     <div className="App">
       <div className="container-fluid p-0">
-        <div className="weather-container w-75 mt-3 mx-auto rounded">
           <Weather defaultCity="Kherson" />
           <footer>
             <p className="p-5">This project was coded by <strong>Hanna Tkach</strong> and is{" "}
@@ -20,7 +19,6 @@ export default function App() {
               </a>
             </p>
           </footer>
-        </div>
       </div>
     </div>
   );
