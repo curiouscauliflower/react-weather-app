@@ -47,7 +47,6 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <div className="weather-container w-75 pt-3 mx-auto">
         <form onSubmit={handleSubmit}>
             <input
               type="search"
@@ -60,7 +59,6 @@ export default function Weather(props) {
             <input type="submit" value="Search" className="rounded mt-4 ms-2 search-btn" />
         </form>
           <WeatherInfo data={weatherData} />
-        </div>
       </div>
     );
   } else {
