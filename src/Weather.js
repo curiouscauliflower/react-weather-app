@@ -60,7 +60,7 @@ export default function Weather(props) {
             <input type="submit" value="Search" className="rounded mt-4 ms-2 search-btn" />
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast />
+        <WeatherForecast city={weatherData.city} />
       </div>
     );
   } else {
