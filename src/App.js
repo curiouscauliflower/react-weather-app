@@ -5,18 +5,6 @@ export default function App() {
   return (
     <div className="App">
       <div className="container-fluid p-0">
-              <div className="leaves">
-          <div class="leaf1">🍁</div>
-          <div class="leaf2">🍁</div>
-          <div class="leaf3">🍁</div>
-          <div class="leaf4">🍁</div>
-          <div class="leaf6">🍁</div>
-          <div class="leaf7">🍁</div>
-          <div class="leaf8">🍁</div>
-          <div class="leaf9">🍁</div>
-          <div class="leaf10">🍁</div>
-          <div class="leaf11">🍁</div>
-      </div>
         <div className="weather-container w-75 pt-3 mx-auto">
           <Weather defaultCity="Kherson" />
           <footer>
