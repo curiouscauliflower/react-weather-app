@@ -1,0 +1,14 @@
+.WeatherForecast .next-5-days__title {
+    text-align: start;
+    margin-left: 88px;
+}
+
+.WeatherForecast .next-5-days__day,
+.WeatherForecast .next-5-days__max-temp {
+    font-size: 22px;
+}
+
+.WeatherForecast .next-5-days__min-temp {
+    color: #c15075;
+    font-size: 18px;
+}

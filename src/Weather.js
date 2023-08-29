@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import { MutatingDots  } from 'react-loader-spinner';
 import axios from "axios";
 import "./Weather.css";
@@ -58,7 +59,8 @@ export default function Weather(props) {
             />
             <input type="submit" value="Search" className="rounded mt-4 ms-2 search-btn" />
         </form>
-          <WeatherInfo data={weatherData} />
+        <WeatherInfo data={weatherData} />
+        <WeatherForecast />
       </div>
     );
   } else {

@@ -1,9 +1,3 @@
-.Weather {
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-}
-
 .Weather .search-field {
     width: 30%;
     height: 40px;
