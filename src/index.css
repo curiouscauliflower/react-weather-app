@@ -6,5 +6,9 @@
 }
 
 body {
-    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    background: url(/images/transparent-watercolor-flowers.png), url(/images/butterfly-animation.gif), url(/images/watercolor-flower.png), linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+    background-size: 450px, 270px, 200px, 100%;
+    background-repeat: no-repeat;
+    background-position-y: 390px, 40px, 80px, 100%;
+    background-position-x: 0, 990px, 1020px, 0;
 }
