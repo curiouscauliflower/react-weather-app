@@ -8,14 +8,15 @@ export default function App() {
         <div className="weather-container w-75 pt-3 mx-auto">
           <Weather defaultCity="Kherson" />
           <footer>
-            <p className="p-5">This project was coded by <strong>Hanna Tkach</strong> and is{" "}
+            <p className="p-5 w-75 mx-auto">This project was coded by <a href="https://www.linkedin.com/in/hanna-tkach-31a32b277/" target="_blank"
+                rel="noreferrer noopener">Hanna Tkach</a> and is{" "}
               <a href="https://github.com/curiouscauliflower/react-weather-application.git"
                  target="_blank"
-                 rel="noreferrer noopener nofollow">open-sourced on GitHub
+                 rel="noreferrer noopener">open-sourced on GitHub
               </a>
               {" "}and <a href="https://curious-cauliflower-react-weather-app.netlify.app/"
                 target="_blank"
-                rel="noreferrer noopener nofollow">
+                rel="noreferrer noopener">
                 hosted on Netlify
               </a>
             </p>

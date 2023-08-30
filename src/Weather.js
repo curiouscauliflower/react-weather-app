@@ -53,8 +53,8 @@ export default function Weather(props) {
               type="search"
               name="searchField"
               placeholder="Enter a city..."
-              autocomplete="off"
-            class="rounded mt-4 search-field"
+              autoComplete="off"
+            className="rounded mt-4 search-field"
             onChange={handleCityChange}
             />
             <input type="submit" value="Search" className="rounded mt-4 ms-2 search-btn" />

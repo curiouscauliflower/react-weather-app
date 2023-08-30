@@ -23,12 +23,12 @@ export default function WeatherForecastDay(props) {
     return (
         <div>
             <div className="mb-2">
-                <span className="next-5-days__day">{showDay()}</span>
+                <span className="next-6-days__day">{showDay()}</span>
             </div>
             <WeatherIcon code={props.data.condition.icon} size={70} />
             <div>
-                <span className="next-5-days__max-temp">{maxTemperature()}° </span>
-                <span className="next-5-days__min-temp">{minTemperature()}°</span>
+                <span className="next-6-days__max-temp">{maxTemperature()}° </span>
+                <span className="next-6-days__min-temp">{minTemperature()}°</span>
             </div>
         </div>
     );

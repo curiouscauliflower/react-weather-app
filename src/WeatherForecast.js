@@ -17,13 +17,21 @@ export default function WeatherForecast(props) {
     }
 
     if (loaded) {
-                return (
+        return (
             <div className="WeatherForecast">
-                <h3 className="mt-5 mb-4 next-5-days__title">Next 5 days</h3>
-                <div className="row justify-content-center mx-auto">
-                    <div className="col-2 p-0">
-                        <WeatherForecastDay data={forecast[1]} />
-                    </div>
+                <h3 className="mt-5 mb-4 ms-5 next-6-days__title">Next 6 days</h3>
+                <div className="row justify-content-center">
+                    {forecast.map(function (dailyForecast, index) {
+                        if (index > 0 && index < 7) {
+                            return (
+                                <div className="col-2 p-0" key={index}>
+                                    <WeatherForecastDay data={dailyForecast} />
+                                </div>
+                            ); 
+                        } else {
+                            return null;
+                        }
+                    })}
                 </div>
             </div>
         );

@@ -34,7 +34,7 @@ export default function FormattedDate(props) {
 
     return (
         <div>
-            <li>{currentDay}, {currentMonth} {currentDate}</li>
+            <div>{currentDay}, {currentMonth} {currentDate}</div>
         </div>
     );
 }
