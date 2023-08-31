@@ -5,10 +5,10 @@ export default function App() {
   return (
     <div className="App">
       <div className="container-fluid p-0">
-        <div className="weather-container w-75 pt-3 mx-auto">
+        <div className="weather-container w-50 pt-3 mx-auto">
           <Weather defaultCity="Kherson" />
           <footer>
-            <p className="p-5 w-75 mx-auto">This project was coded by <a href="https://www.linkedin.com/in/hanna-tkach-31a32b277/" target="_blank"
+            <p className="pt-4 p-sm-4 p-md-5 w-75 mx-auto">This project was coded by <a href="https://www.linkedin.com/in/hanna-tkach-31a32b277/" target="_blank"
                 rel="noreferrer noopener">Hanna Tkach</a> and is{" "}
               <a href="https://github.com/curiouscauliflower/react-weather-application.git"
                  target="_blank"

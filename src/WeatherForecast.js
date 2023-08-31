@@ -20,11 +20,11 @@ export default function WeatherForecast(props) {
         return (
             <div className="WeatherForecast">
                 <h3 className="mt-5 mb-4 ms-5 next-6-days__title">Next 6 days</h3>
-                <div className="row justify-content-center">
+                <div className="row justify-content-center mx-auto">
                     {forecast.map(function (dailyForecast, index) {
                         if (index > 0 && index < 7) {
                             return (
-                                <div className="col-2 p-0" key={index}>
+                                <div className="col-6 col-sm-5 col-md-4 col-lg-2 px-0 pb-3 p-lg-0" key={index}>
                                     <WeatherForecastDay data={dailyForecast} />
                                 </div>
                             ); 

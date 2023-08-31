@@ -67,18 +67,18 @@ export default function Weather(props) {
     search();
     return (
       <div>
-        <p className="loading">Loading...</p>
+        <p className="loader">Loading...</p>
         <MutatingDots 
           height="100"
           width="100"
           color="#fff"
-          secondaryColor= '#9e569a'
-          radius='12.5'
+          secondaryColor="#9e569a"
+          radius="12.5"
           ariaLabel="mutating-dots-loading"
           wrapperStyle={{
             display: "block",
             margin: "auto",
-            padding: "50px 0"
+            padding: "50px 0 700px"
           }}
           wrapperClass=""
           visible={true}

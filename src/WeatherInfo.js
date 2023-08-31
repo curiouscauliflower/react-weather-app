@@ -15,8 +15,8 @@ export default function WeatherInfo(props) {
                     <li><FormattedTime time={props.data.time} /></li>
                 </ul>
             </div>
-            <div className="row mx-auto">
-                <div className="col-6 p-0">
+            <div className="row mx-auto weather-row">
+                <div className="col-8 col-sm-7 col-md-6 p-0">
                     <div className="d-flex current-temperature">
                         <div className="icon-container">
                             <WeatherIcon code={props.data.icon} size={156} />
@@ -32,7 +32,7 @@ export default function WeatherInfo(props) {
                         </div>
                     </div>
                 </div>
-                <div className="col-6 p-0">
+                <div className="col-8 col-sm-7 col-md-6 p-0">
                     <div className="d-flex justify-content-evenly current-stats">
 
                         <div>

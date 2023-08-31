@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .App a {
@@ -15,4 +15,34 @@
 
 .App ul {
   padding: 0;
+}
+
+@media (max-width: 1680px) {
+  .App .weather-container {
+    width: 60% !important;
+  }
+}
+
+@media (max-width: 1440px) {
+  .App .weather-container {
+    width: 75% !important;
+  }
+}
+
+@media (max-width: 1366px) {
+  .App {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 990px) {
+  .App .weather-container {
+    width: 85% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .App .weather-container {
+    width: 100% !important;
+  }
 }

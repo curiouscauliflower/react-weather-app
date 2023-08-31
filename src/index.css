@@ -7,8 +7,53 @@
 
 body {
     background: url(/images/transparent-watercolor-flowers.png), url(/images/butterfly-animation.gif), url(/images/watercolor-flower.png), linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
-    background-size: 450px, 270px, 200px, 100%;
+    background-size: 460px, 280px, 210px, 100%;
     background-repeat: no-repeat;
-    background-position-y: 390px, 40px, 80px, 100%;
-    background-position-x: 0, 990px, 1020px, 0;
+    background-position-y: 440px, 50px, 90px, 100%;
+    background-position-x: 190px, 1270px, 1300px, 0;
+}
+
+@media (max-width: 1680px) {
+    body {
+        background-size: 460px, 280px, 210px, 100%;
+        background-position-y: 440px, 50px, 90px, 100%;
+        background-position-x: 100px, 1170px, 1200px, 0;
+    }
+}
+
+@media (max-width: 1440px) {
+    body {
+        background-size: 460px, 280px, 210px, 100%;
+        background-position-y: 440px, 50px, 90px, 100%;
+        background-position-x: 0, 1100px, 1130px, 0;
+    }
+}
+
+@media (max-width: 1366px) {
+    body {
+        background-size: 450px, 270px, 200px, 100%;
+        background-position-y: 390px, 40px, 80px, 100%;
+        background-position-x: 0, 990px, 1020px, 0;
+    }
+}
+
+@media (max-width: 1280px) {
+    body {
+        background-size: 440px, 260px, 190px, 100%;
+        background-position-y: 410px, 40px, 80px, 100%;
+        background-position-x: 0, 970px, 1000px, 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        background: url(/images/leaves.jpg);
+        background-size: cover;
+    }
+}
+
+@media (max-width: 991px) {
+    body {
+        background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+    }
 }

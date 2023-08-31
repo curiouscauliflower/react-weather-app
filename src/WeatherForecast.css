@@ -1,5 +1,6 @@
 .WeatherForecast .next-6-days__title {
     text-align: start;
+    font-size: 30px;
 }
 
 .WeatherForecast .next-6-days__day,
@@ -10,4 +11,35 @@
 .WeatherForecast .next-6-days__min-temp {
     color: #9e569a;
     font-size: 18px;
+}
+
+@media (max-width: 1366px) {
+    .WeatherForecast .next-6-days__title {
+        font-size: 28px;
+    }
+
+    .WeatherForecast .next-6-days__day,
+    .WeatherForecast .next-6-days__max-temp {
+        font-size: 22px;
+    }
+
+    .WeatherForecast .next-6-days__min-temp {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 990px) {
+    .WeatherForecast .next-6-days__title {
+        text-align: center;
+        margin-left: 0 !important;
+    }
+
+    .WeatherForecast .next-6-days__day,
+    .WeatherForecast .next-6-days__max-temp {
+        font-size: 22px;
+    }
+
+    .WeatherForecast .next-6-days__min-temp {
+        font-size: 18px;
+    }
 }
